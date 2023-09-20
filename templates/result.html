@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+    {{ display | safe }}
+<style>
+   body {
+  background: #18212D;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  color: white;
+}
+</style>
+    
+{% endblock %}
