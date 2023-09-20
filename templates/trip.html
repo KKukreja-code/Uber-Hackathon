@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Trip
+{% endblock %}
+
+{% block main %}
+<style>
+   body {
+  background: #18212D;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.btn-primary {
+  position: relative;
+  width: 10%;
+  height: 3%;
+}
+
+</style>
+
+    <div class="gray">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="login-area">
+            <br>
+            <form action="/trip" method="post" id="login-form">
+                <div class="mb-3">
+                    <label for="mode">Please enter your mode of travel: transit or carpool: (t/c)</label>
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="mode" name="mode" placeholder="Mode of Travel" type="text">
+                </div>
+                <div class="mb-3">
+                      <label for="start">Start address: </label>
+                      <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="start" name="start" placeholder="Start Address" type="text">
+                </div>
+                <div class="mb-3">
+                      <label for="end">Destination</label>
+                      <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="end" name="end" placeholder="Destination" type="text">
+                </div>
+                <div class="mb-3" id="numpaxdiv" style="display: none;">
+                    <label for="numpax">Enter the number of people you're sharing with (including you)</label>
+                    <input class="form-control mx-auto w-auto" id="numpax" name="numpax" placeholder="Number of People" type="number">
+                </div>
+                <script>
+                    const modeInput = document.getElementById('mode');
+                    const numpaxDiv = document.getElementById('numpaxdiv');
+                
+                    modeInput.addEventListener('input', function() {
+                        if (modeInput.value.toLowerCase() === 'c') {
+                            numpaxDiv.style.display = 'block';
+                        } else {
+                            numpaxDiv.style.display = 'none';
+                        }
+                    });
+                </script>
+                <div class="mb-3" id="transittypediv" style="display: none;">
+                    <label for="transittype">Train or bus (train/bus): </label>
+                    <input class="form-control mx-auto w-auto" id="transittype" name="transittype" placeholder="Transit Type" type="text">
+                </div>
+                <script>
+                    const modeInput2 = document.getElementById('mode');
+                    const transittypeDiv = document.getElementById('transittypediv');
+                
+                    modeInput.addEventListener('input', function() {
+                        if (modeInput2.value.toLowerCase() === 't') {
+                            transittypeDiv.style.display = 'block';
+                        } else {
+                            transittypeDiv.style.display = 'none';
+                        }
+                    });
+                </script>
+                <div class="mb-3" id="disableddiv" style="display: none;">
+                    <!-- scope for improvement, maybe send MC to the admin for verification -->
+                    <label for="disabled">Are you disabled (y/n): </label>
+                    <input class="form-control mx-auto w-auto" id="disabled" name="disabled" placeholder="Disabled?" type="text">
+                </div>
+                <script>
+                    const modeInput3 = document.getElementById('mode');
+                    const disableddiv = document.getElementById('disableddiv');
+                
+                    modeInput.addEventListener('input', function() {
+                        if (modeInput3.value.toLowerCase() === 't') {
+                            disableddiv.style.display = 'block';
+                        } else {
+                            disableddiv.style.display = 'none';
+                        }
+                    });
+                </script>
+                <button class="btn btn-primary" type="submit" id="login-button">Launch Trip</button>
+            </form>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+{% endblock %}
