@@ -37,6 +37,7 @@ The code utilises this database to store all user login details, their points an
 
 * Download accounts.db
 * pip install previously listed modules
+* Have a working computer
 
 ## Troubleshooting
 
