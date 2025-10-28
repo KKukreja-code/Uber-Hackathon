@@ -21,7 +21,7 @@ built using:
   
 ## Introduction 
 
-(website name) is a multipurposed website designed to promote environmental friendliness and improve traffic congestion. It does this by allowing users to ear points through the use of public transport and ridesharing. These points would be used to provide discounts for certain services as an incentive for environmentally friendly behaviour. We prodive the shortest route, the route that releases the least amount of CO2 along with routes with less walking and transfers for disabled people.
+Synchronicity is a multipurposed website designed to promote environmental friendliness and improve traffic congestion. It does this by allowing users to ear points through the use of public transport and ridesharing. These points would be used to provide discounts for certain services as an incentive for environmentally friendly behaviour. We prodive the shortest route, the route that releases the least amount of CO2 along with routes with less walking and transfers for disabled people.
 
 ## Code Overview
 
@@ -48,3 +48,4 @@ If you put boundary data in the code (put the starting point in the wrong countr
 if the github database does not work try to run our code on this replit link:
 
 https://replit.com/@KrishivKukreja/Hackstreet-Boys
+
